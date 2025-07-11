@@ -1,0 +1,14 @@
+langchain
+langchain-chroma
+langchain-community
+langchain-ollama
+langchain-huggingface
+chromadb
+sentence-transformers
+weaviate-client
+tiktoken
+pypdf
+pymupdf
+gradio
+protobuf==3.20.*
+spacy
