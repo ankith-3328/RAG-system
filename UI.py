@@ -39,7 +39,6 @@ retriever = vectorstore.as_retriever()
 
 # You can change the LLM model being used here
 # Once you get cloud storage please download 650B parameters model and try to use it here 
-# If i have already left by then please tell me how good it is, I never used that in my life (sed life)
 llm = OllamaLLM(model="deepseek-coder-v2:latest")
 
 # You could pass history of chat as a list of Strings
@@ -65,13 +64,9 @@ def answer_query(query, history):
     Provide a clear and point-wise answer based only on the provided context.
     """
     
-    # I dont have to explain this I guess
-    # If you are too dumb then its getting the response from the LLM and printing it
     response = llm.invoke(prompt)
     return response
 
-# Gradio UI is being used here
-# Its very basic to use just to make UI for chat bots
 with gr.Blocks() as app:
     gr.ChatInterface(
         fn=answer_query,
@@ -82,5 +77,3 @@ with gr.Blocks() as app:
     )
 
 app.launch()
-
-#Thanks I guess idk 
